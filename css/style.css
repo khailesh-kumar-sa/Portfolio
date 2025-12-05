@@ -1,4 +1,4 @@
-/* CYBERSECURITY PORTFOLIO 2025 - ULTIMATE DARK MODE */
+/* CYBERSECURITY PORTFOLIO 2025 - NAVBAR OVERLAP FIXED */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
@@ -23,11 +23,12 @@ body {
     line-height: 1.7; overflow-x: hidden;
     background: linear-gradient(135deg, var(--dark) 0%, var(--dark-secondary) 100%);
     color: var(--text-light);
+    padding-top: 90px; /* ✅ NAVBAR OVERLAP FIX */
 }
 
 /* NAVBAR - DARK GLASS + MOBILE */
 .navbar {
-    position: fixed; top: 0; width: 100%; z-index: 1000; padding: 1rem 0;
+    position: fixed; top: 0; width: 100%; z-index: 10000; padding: 1rem 0;
     backdrop-filter: blur(25px); box-shadow: var(--shadow);
     background: rgba(15,15,35,0.95); border-bottom: var(--border-glow);
 }
@@ -58,11 +59,12 @@ body {
     box-shadow: 0 15px 40px rgba(0,212,170,0.3);
 }
 
-/* HERO SECTION */
+/* HERO SECTION - FIXED OVERLAP */
 .hero { 
-    min-height: 100vh; padding-top: 120px;
+    min-height: 100vh;
     display: flex; align-items: center; justify-content: center; 
     text-align: center; position: relative; overflow: hidden;
+    padding-top: 40px; /* ✅ REDUCED - body padding handles navbar */
 }
 .hero.contact-hero, .hero.testimonials-hero, .hero.achievements-hero {
     background: linear-gradient(135deg, var(--dark) 0%, var(--dark-secondary) 100%);
@@ -106,7 +108,7 @@ body {
     box-shadow: var(--shadow-hover), 0 0 30px rgba(0,212,170,0.4);
 }
 
-/* CONTAINER & SECTIONS */
+/* CONTAINER & SECTIONS - FIXED SPACING */
 .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
 .section { padding: 140px 0; }
 .section-title {
@@ -139,6 +141,24 @@ body {
 .skill-card, .project-card { padding: 3.5rem 3rem; position: relative; overflow: hidden; }
 .testimonial-card { padding: 3rem; border-left: 6px solid var(--primary); }
 .achievement-card { padding: 3rem; text-align: center; }
+
+/* TESTIMONIALS GLASS CARDS */
+.testimonial-author {
+    display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2rem;
+}
+.testimonial-author i { font-size: 3.5rem; color: var(--primary); opacity: 0.8; }
+.testimonial-author h4 {
+    font-weight: 800; font-size: 1.4rem; margin: 0 0 0.25rem 0;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.testimonial-role {
+    color: var(--text-muted); font-size: 0.9rem; display: block; font-weight: 500;
+}
+.testimonial-card p {
+    color: var(--text-muted); font-size: 1.05rem; line-height: 1.8; 
+    font-style: italic; margin: 0;
+}
 
 /* CONTACT ITEMS */
 .contact-item {
@@ -206,12 +226,12 @@ body {
 }
 
 /* SHIMMER EFFECT */
-.skill-card::before, .project-card::before {
+.skill-card::before, .project-card::before, .testimonial-card::before {
     content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
     background: linear-gradient(45deg, transparent, rgba(0,212,170,0.08), transparent);
     transform: rotate(45deg); transition: all 0.8s; opacity: 0;
 }
-.skill-card:hover::before, .project-card:hover::before { 
+.skill-card:hover::before, .project-card:hover::before, .testimonial-card:hover::before { 
     animation: shimmer 2s infinite; opacity: 1;
 }
 @keyframes shimmer { 
@@ -220,7 +240,7 @@ body {
 }
 
 /* TYPOGRAPHY */
-.skill-card h3, .project-card h3, .testimonial-card h4 {
+.skill-card h3, .project-card h3, .testimonial-author h4 {
     font-weight: 800; font-size: 1.5rem; margin-bottom: 1.5rem;
     background: linear-gradient(135deg, var(--primary), var(--accent));
     -webkit-background-clip: text; -webkit-text-fill-color: transparent;
@@ -279,6 +299,7 @@ body {
     .experience-item { flex-direction: column; padding-left: 4rem; }
 }
 @media (max-width: 768px) {
+    body { padding-top: 80px; } /* ✅ MOBILE NAVBAR FIX */
     .nav-menu { 
         position: fixed; top: 100%; left: 0; width: 100%; 
         flex-direction: column; background: rgba(15,15,35,0.98); 
@@ -290,4 +311,5 @@ body {
     .skills-grid, .projects-grid, .testimonials-container { grid-template-columns: 1fr; gap: 2rem; }
     .section { padding: 100px 0; }
     .experience-timeline::before { left: 2rem; }
+    .hero { padding-top: 20px; }
 }
