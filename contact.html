@@ -28,7 +28,7 @@
     <section class="hero contact-hero">
         <div class="hero-content">
             <h1 class="hero-title">Let's Connect</h1>
-            <p class="hero-tagline">I am open to professional opportunities, collaborations, and meaningful discussions in the fields of AI, software development, and cybersecurity. If you believe my skills align with your goals or projects, I would be glad to connect.</p>
+            <p class="hero-tagline">Professional opportunities, collaborations, and cybersecurity discussions</p>
             <div class="hero-stats">
                 <span><i class="fas fa-envelope"></i> Response within 24h</span>
                 <span><i class="fas fa-clock"></i> Available Now</span>
@@ -36,13 +36,15 @@
         </div>
     </section>
 
-    <!-- CONTACT INFO GRID -->
+    <!-- CONTACT GRID - EQUAL WIDTH -->
     <section class="section">
         <div class="container">
-            <div class="about-grid">
-                <!-- CONTACT DETAILS -->
+            <div class="contact-grid"> <!-- CHANGED: about-grid → contact-grid -->
+                <!-- GET IN TOUCH -->
                 <div class="contact-card">
-                    <h2 class="section-title" style="margin-bottom: 2.5rem;"><i class="fas fa-address-book"></i> Get In Touch</h2>
+                    <h2 class="section-title" style="margin-bottom: 2.5rem; font-size: 2.2rem;">
+                        <i class="fas fa-address-book"></i> Get In Touch
+                    </h2>
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
                         <a href="mailto:khailesh.kumar@outlook.com">khailesh.kumar@outlook.com</a>
@@ -72,23 +74,29 @@
                     </div>
                 </div>
 
-                <!-- CONTACT FORM -->
+                <!-- SEND MESSAGE - MODERN FORM -->
                 <div class="contact-card">
-                    <h2 class="section-title" style="margin-bottom: 2.5rem;"><i class="fas fa-paper-plane"></i> Send Message</h2>
+                    <h2 class="section-title" style="margin-bottom: 2.5rem; font-size: 2.2rem;">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </h2>
                     <form class="contact-form">
                         <div class="form-group">
-                            <input type="text" name="name" placeholder="Your Name" required>
+                            <i class="fas fa-user"></i>
+                            <input type="text" name="name" placeholder="Your Name *" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" name="email" placeholder="Your Email" required>
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" name="email" placeholder="Your Email *" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" name="subject" placeholder="Subject" required>
+                            <i class="fas fa-tag"></i>
+                            <input type="text" name="subject" placeholder="Subject *" required>
                         </div>
                         <div class="form-group">
+                            <i class="fas fa-comment"></i>
                             <textarea name="message" rows="6" placeholder="Tell me about your project or opportunity..." required></textarea>
                         </div>
-                        <button type="submit" class="cta-primary" style="width: 100%; padding: 1.5rem; font-size: 1.1rem;">
+                        <button type="submit" class="cta-primary" style="width: 100%; padding: 1.5rem; font-size: 1.1rem; margin-top: 1rem;">
                             <i class="fas fa-paper-plane"></i> Send Message
                         </button>
                     </form>
